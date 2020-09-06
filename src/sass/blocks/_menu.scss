@@ -1,0 +1,68 @@
+.menu {
+	padding: 80px 0 30px 0;
+	background: url("../img/pattern2.jpg") center (center / cover) no-repeat;
+	@media (max-width: 425px) {
+		padding-top: 60px;
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+}
+.menu-card {
+	width: calc((100% - 170px) / 2);
+	margin-bottom: 60px;
+	@media (max-width: 900px) {
+		width: calc((100% - 90px) / 2);
+	}
+	@media (max-width: 768px) {
+		width: 100%;
+	}
+	&__title {
+		margin-bottom: 15px;
+		@include title;
+		color: $golden;
+		text-align: center;
+	}
+	&__divider {
+		@include divider;
+		margin-bottom: 20px;
+	}
+	&__item {
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&.--special {
+			position: relative;
+			border: 1px solid $golden;
+			padding: 15px;
+			&:before {
+				content: "Special";
+				position: absolute;
+				top: -23px;
+				right: -1px;
+				width: 69px;
+				height: 22px;
+				background-color: $golden;
+				@include label;
+				color: $white;
+				text-align: center;
+			}
+		}
+	}
+
+}
+
+.dish {
+	&__info {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 5px;
+		border-bottom: 2px solid #fbf7c0;
+		padding-bottom: 5px;
+		@include smallTitle;
+		color: $golden;
+	}
+}
