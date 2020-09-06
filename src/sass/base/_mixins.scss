@@ -1,0 +1,94 @@
+@mixin divider {
+	display: block;
+	width: 247px;
+	margin: 0 auto;
+}
+
+@mixin H1 {
+	font-family: $title;
+	font-size: 90px;
+	line-height: 1.2;
+	font-weight: 400;
+	color: rgba($color: $white, $alpha: 1);
+}
+
+@mixin title {
+	font-family: $title;
+	font-size: 36px;
+	line-height: 1.2;
+	font-weight: 400;
+}
+
+@mixin smallTitle {
+	font-family: $title;
+	font-size: 21px;
+	line-height: 1.2;
+	font-weight: 400;
+}
+
+@mixin regular {
+	font-family: $main;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+@mixin bold {
+	font-family: $main;
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 700;
+}
+
+@mixin reviewText {
+	font-family: $review;
+	font-size: 25px;
+	line-height: 1.5;
+	font-weight: 400;
+	color: $white;
+}
+
+@mixin label {
+	font-family: $main;
+	font-size: 14px;
+	line-height: 1.2;
+	font-weight: 700;
+}
+
+@mixin navMenu {
+	font-family: $review;
+	font-size: 21px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: $white
+}
+
+// Buttons
+
+@mixin btn {
+	.btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 230px;
+		height: 55px;
+		padding: 10px;
+		@include regular;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+@mixin btnColor($btn-modifier, $mainColor, $textColor) {
+	.btn.#{$btn-modifier} {
+		border: 1px solid $mainColor;
+		background-color: rgba($color: $mainColor, $alpha: 0.5);
+		&:hover {
+			color: $textColor;
+			background-color: rgba($color: $mainColor, $alpha: 1);
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+			transition: all 1s ease;
+		}
+	}
+}
