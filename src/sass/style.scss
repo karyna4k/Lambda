@@ -1,0 +1,26 @@
+@import "base/_reset";
+@import "base/variables";
+@import "base/mixins";
+@import url("https://fonts.googleapis.com/css?family=Yeseva+One:regular");
+@import url("https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700");
+@import url("https://fonts.googleapis.com/css?family=Lato:regular");
+
+body {
+	position: relative;
+	@include regular;
+}
+
+.container {
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+@import "blocks/buttons";
+@import "blocks/header";
+@import "blocks/about";
+@import "blocks/ingredients";
+@import "blocks/menu";
+@import "blocks/reviews";
+@import "blocks/booking";
+@import "blocks/footer";
