@@ -1,0 +1,4 @@
+@include btn;
+@include btnColor('btn--dark', $darkBlack, $golden);
+@include btnColor('btn--light', $white, $golden);
+@include btnColor('btn--golden', $golden, $white);
