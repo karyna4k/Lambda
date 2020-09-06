@@ -1,0 +1,121 @@
+.footer {
+	padding: 60px 0 40px 0;
+	background-color: $darkBlack;
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__item {
+		width: calc(100% / 3);
+		margin-bottom: 30px;
+		text-align: center;
+		@media (max-width: 900px) {
+			width: calc(100% / 2);
+		}
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+	}
+	&__title {
+		margin-bottom: 20px;
+		@include smallTitle;
+		color: $white;
+	}
+	&__divider {
+		@include divider;
+	}
+	&__text {
+		padding-top: 20px;
+		@include regular;
+		color: $white;
+		span {
+			@include bold;
+		}
+	}
+	&__schedule {
+		margin-bottom: 20px;
+		padding-top: 20px;
+		@include regular;
+		color: $white;
+		span {
+			@include bold;
+		}
+	}
+	.payment {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 200px;
+		margin: 0 auto;
+		&__item {
+			width: 40px;
+			height: 40px;
+		}
+		&__link {
+			width: 100%;
+			height: 100%;
+			background-color: $white;
+			mask-position: center;
+			mask-repeat: no-repeat;
+			mask-size: 100%;
+			&:hover {
+				background-color: $golden;
+				transition: all 0.5s ease;
+			}
+		}
+		.--wester-union {
+			mask-image: url(../img/icons/payment/money.svg);
+		}
+		.--paypal {
+			mask-image: url(../img/icons/payment/paypal.svg);
+		}
+		.--visa {
+			mask-image: url(../img/icons/payment/visa.svg);
+		}
+		.--mastercard {
+			mask-image: url(../img/icons/payment/mastercard.svg);
+		}	
+	}
+	&__address {
+		margin-bottom: 30px;
+		padding-top: 20px;
+		@include bold;
+		color: $white;
+	}
+	.social {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 140px;
+		margin: 0 auto;
+		&__item {
+			width: 20px;
+			height: 20px;
+		}
+		&__link {
+			width: 100%;
+			height: 100%;
+			background-color: $white;
+			mask-position: center;
+			mask-repeat: no-repeat;
+			mask-size: 100%;
+			&:hover {
+				background-color: $golden;
+				transition: all 0.5s ease;
+			}
+		}
+		.--facebook {
+			mask-image: url(../img/icons/social/facebook.svg);
+		}
+		.--youtube {
+			mask-image: url(../img/icons/social/youtube.svg);
+		}
+		.--twitter {
+			mask-image: url(../img/icons/social/twitter.svg);
+		}
+		.--vk {
+			mask-image: url(../img/icons/social/vk.svg);
+		}
+	}
+}
+
